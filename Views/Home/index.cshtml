@@ -1,0 +1,27 @@
+﻿@model StudentManagement.ViewModel.HomeIndexViewModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>View</title>
+</head>
+<body>
+    <h1>Student</h1>
+    @foreach (var s in Model.Students)
+    {
+<ul>
+    @s.Name@{}(@s.Age)
+    <a href="/Home/Detail/@s.Id">Detail</a>
+    <a asp-action="Detail" asp-route-id="@s.Id">明细</a>
+</ul>
+    }
+    <div>
+        <a asp-action="Create">添加一个学生</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Controllers\新文件夹\**" />
+    <Compile Remove="新文件夹\**" />
+    <Content Remove="Controllers\新文件夹\**" />
+    <Content Remove="新文件夹\**" />
+    <EmbeddedResource Remove="Controllers\新文件夹\**" />
+    <EmbeddedResource Remove="新文件夹\**" />
+    <None Remove="Controllers\新文件夹\**" />
+    <None Remove="新文件夹\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.2" />
+  </ItemGroup>
+
+</Project>
